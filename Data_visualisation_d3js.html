@@ -19,8 +19,8 @@
 
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 50, bottom: 20, left: 50},
-        width = 700 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+        width = 1000 - margin.left - margin.right,
+        height = 700 - margin.top - margin.bottom;
     
     // append the svg object to the body of the page
     var svg = d3.select("#my_dataviz2")
@@ -53,7 +53,7 @@
       // Add X axis
       var x = d3.scaleBand()
           .domain(groups)
-          .range([0, width+30])
+          .range([0, width+300])
           .padding([0.8])
       svg.append("g")
         .attr("transform", "translate(0," + height + ")")
@@ -76,7 +76,7 @@
       // color palette = one color per subgroup
       var color = d3.scaleOrdinal()
         .domain(subgroups)
-        .range(['#e41a1c','#377eb8','#4daf4a', 'yellow', '#E6E6FA', '#CBC3E3', '#CF9FFF', '#AA98A9','#915F6D','#A95C68','#953553', '#673147' ,'#CBC3E3', '#CF9FFF', '#AA98A9','#915F6D','#A95C68','#953553', '#673147'  ])
+        .range(['#FFAEBC','#A0E7E5','#EE5F11', '#11A0EE', '#E6E6FA', '#CBC3E3', '#CF9FFF', '#AA98A9','#915F6D','#A95C68' ,"#cae0c7", '#b0d1ac', '#a3c99e','#95c190','#88ba82','#419282'  ])
     
       //stack the data? --> stack per subgroup
       var stackedData = d3.stack()
