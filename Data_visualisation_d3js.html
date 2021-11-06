@@ -12,24 +12,176 @@
 <svg  ></svg>
 
 <div id="my_dataviz" ></div>
-<br> <br>
-<div id="my_dataviz2" ></div>
+
 
 <script>
+   
+
 
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 50, bottom: 20, left: 50},
-        width = 1000 - margin.left - margin.right,
+        width = 1200 - margin.left - margin.right,
         height = 700 - margin.top - margin.bottom;
     
     // append the svg object to the body of the page
-    var svg = d3.select("#my_dataviz2")
+    var svg = d3.select("#my_dataviz")
       .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
         .attr("transform",
               "translate(" + margin.left + "," + margin.top + ")");
+
+var rectx = 650;
+var recty = 100;
+var recth = 25;
+
+// Sexe
+svg.append('rect')
+  .attr('x', rectx)
+  .attr('y', recty-100)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+
+svg.append('rect')
+  .attr('x', rectx+80)
+  .attr('y', recty-100)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+//Alcool consomption
+svg.append('rect')
+  .attr('x', rectx)
+  .attr('y', recty-50)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+
+svg.append('rect')
+  .attr('x', rectx+80)
+  .attr('y', recty-50)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+// Fruit consomption
+    // Add the path using this helper function
+svg.append('rect')
+  .attr('x', rectx)
+  .attr('y', recty)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+
+svg.append('rect')
+  .attr('x', rectx+80)
+  .attr('y', recty)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+  svg.append('rect')
+  .attr('x', rectx+80*2)
+  .attr('y', recty)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+  svg.append('rect')
+  .attr('x', rectx+80*3)
+  .attr('y', recty)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+
+  svg.append('rect')
+  .attr('x', rectx+80*4)
+  .attr('y', recty)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+
+
+  svg.append('rect')
+  .attr('x', rectx+80*5)
+  .attr('y', recty)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+
+  // Fruit consomption
+    // Add the path using this helper function
+svg.append('rect')
+  .attr('x', rectx)
+  .attr('y', recty+50)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+
+svg.append('rect')
+  .attr('x', rectx+80)
+  .attr('y', recty+50)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+  svg.append('rect')
+  .attr('x', rectx+80*2)
+  .attr('y', recty+50)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+  svg.append('rect')
+  .attr('x', rectx+80*3)
+  .attr('y', recty+50)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+
+  svg.append('rect')
+  .attr('x', rectx+80*4)
+  .attr('y', recty+50)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+
+
+  svg.append('rect')
+  .attr('x', rectx+80*5)
+  .attr('y', recty+50)
+  .attr('width', 80)
+  .attr('height', recth)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+
+
     
     // Parse the Data
     d3.csv("https://raw.githubusercontent.com/SadaouiDyhia/Data_visualisation/main/data.csv", function(data) {
